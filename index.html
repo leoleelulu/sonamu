@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>소나무 - 노스욕 족발&냉면 전문점</title>
   <style>
     @font-face {
@@ -33,7 +34,7 @@
       background: white;
       border-radius: 16px;
       padding: 1.5rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
       max-width: 500px;
     }
 
@@ -94,444 +95,481 @@
       display: none;
     }
 
-    @media (max-width: 768px) {
     .menu-container {
-      flex-direction: column;
-      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      margin-top: 2rem;
+      max-width: 100%;
     }
 
-    .menu-category {
-      flex: 1 1 350px;
-      background: white;
-      border-radius: 16px;
-      padding: 1.2rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-      max-width: 500px;
-      width: 100%;
-      margin-bottom: 2rem;
+    @media (max-width: 768px) {
+      .menu-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .menu-category {
+        width: 100%;
+        max-width: 95%;
+        /* ✅ 전체보다 살짝 작게 */
+        margin: 0 auto;
+        /* ✅ 중앙 정렬 */
+      }
     }
-  }
   </style>
 </head>
+
 <body>
   <!-- 언어 전환 버튼 -->
   <div style="position: absolute; top: 1rem; right: 2rem; display: flex; gap: 0.5rem;">
-    <img id="btn-korean"
-         src="https://flagcdn.com/w40/kr.png"
-         alt="Korean"
-         title="한국어"
-         style="cursor: pointer; width: 20px; height: 20px; border-radius: 50%; border: 1px solid #ccc; object-fit: cover; background-color: #fff;">
-    <img id="btn-english"
-         src="https://flagcdn.com/w40/us.png"
-         alt="English"
-         title="English"
-         style="cursor: pointer; width: 20px; height: 20px; border-radius: 50%; border: 1px solid #ccc; object-fit: cover; background-color: #fff;">
+    <img id="btn-korean" src="https://flagcdn.com/w40/kr.png" alt="Korean" title="한국어"
+      style="cursor: pointer; width: 20px; height: 20px; border-radius: 50%; border: 1px solid #ccc; object-fit: cover; background-color: #fff;">
+    <img id="btn-english" src="https://flagcdn.com/w40/us.png" alt="English" title="English"
+      style="cursor: pointer; width: 20px; height: 20px; border-radius: 50%; border: 1px solid #ccc; object-fit: cover; background-color: #fff;">
   </div>
 
   <!-- 상단 배너 -->
   <div style="width: 100%; height: 180px; overflow: hidden;">
-    <img src="image.jpg" alt="Restaurant Banner" style="width: 100%; height: 100%; object-fit: contain; display: block;">
+    <img src="image.jpg" alt="Restaurant Banner"
+      style="width: 100%; height: 100%; object-fit: contain; display: block;">
   </div>
 
   <div class="menu-container">
     <!-- 족발 메뉴 -->
     <!-- 족발 메뉴 -->
-<div class="menu-category">
-    <div class="category-header">
-      <div class="category-icon">🍖</div>
-      <h2 class="category-title">족발 (Jokbal)</h2>
-    </div>
-  
-    <div class="menu-item">
-      <h3 class="item-name">
-        <span class="item-label"><span class="label-ko">족발</span><span class="label-en" style="display:none;">Jokbal</span></span>
-        <span class="arrow">ⓘ</span>
-        <span class="item-price-separator"></span><span class="item-price">$40.99</span>
-      </h3>
-      <p class="item-description">부드럽게 삶아 특제 양념으로 맛을 낸 전통 방식의 족발</p>
-    </div>
-  
-    <div class="menu-item">
-      <h3 class="item-name">
-        <span class="item-label"><span class="label-ko">매운 족발</span><span class="label-en" style="display:none;">Bul Jokbal</span></span>
-        <span class="arrow">ⓘ</span>
-        <span class="item-price-separator"></span><span class="item-price">$43.99</span>
-      </h3>
-      <p class="item-description">매콤한 양념을 곁들인 화끈한 맛의 족발</p>
-    </div>
-  
-    <div class="menu-item">
-      <h3 class="item-name">
-        <span class="item-label"><span class="label-ko">족발무침</span><span class="label-en" style="display:none;">Jokbal Muchim</span></span>
-        <span class="arrow">ⓘ</span>
-        <span class="item-price-separator"></span><span class="item-price">$40.99</span>
-      </h3>
-      <p class="item-description">특제 양념에 버무린 족발무침</p>
-    </div>
-  
-    <div class="menu-item">
-      <h3 class="item-name">
-        <span class="item-label"><span class="label-ko">냉채족발</span><span class="label-en" style="display:none;">Naengchae Jokbal</span></span>
-        <span class="arrow">ⓘ</span>
-        <span class="item-price-separator"></span><span class="item-price">$43.99</span>
-      </h3>
-      <p class="item-description">신선한 채소와 함께 차갑게 즐기는 족발</p>
-    </div>
-  
-    <!-- ✅ 추가된 메뉴들 -->
-    <div class="menu-item">
-      <h3 class="item-name">
-        <span class="item-label"><span class="label-ko">BBQ 치즈 족발</span><span class="label-en" style="display:none;">BBQ Cheese Jokbal</span></span>
-        <span class="arrow">ⓘ</span>
-        <span class="item-price-separator"></span><span class="item-price">$45.99</span>
-      </h3>
-      <p class="item-description">BBQ 소스와 치즈를 곁들인 특별한 족발</p>
-    </div>
-  
-    <div class="menu-item">
-      <h3 class="item-name">
-        <span class="item-label"><span class="label-ko">보쌈</span><span class="label-en" style="display:none;">Bossam</span></span>
-        <span class="arrow">ⓘ</span>
-        <span class="item-price-separator"></span><span class="item-price">$39.99</span>
-      </h3>
-      <p class="item-description">부드럽게 삶은 돼지고기와 양배추, 쌈장</p>
-    </div>
-  
-    <div class="menu-item">
-      <h3 class="item-name">
-        <span class="item-label"><span class="label-ko">족발 + 보쌈 콤보</span><span class="label-en" style="display:none;">Jokbal + Bossam Combo</span></span>
-        <span class="arrow">ⓘ</span>
-        <span class="item-price-separator"></span><span class="item-price">$42.99</span>
-      </h3>
-      <p class="item-description">족발과 보쌈을 함께 즐길 수 있는 콤보</p>
-    </div>
-  
-    <div class="menu-item">
-      <h3 class="item-name">
-        <span class="item-label"><span class="label-ko">불족발 + 보쌈 콤보</span><span class="label-en" style="display:none;">Spicy Jokbal + Bossam Combo</span></span>
-        <span class="arrow">ⓘ</span>
-        <span class="item-price-separator"></span><span class="item-price">$45.99</span>
-      </h3>
-      <p class="item-description">매운 족발과 보쌈을 함께 즐길 수 있는 콤보</p>
-    </div>
-  </div>
-  
+    <div class="menu-category">
+      <div class="category-header">
+        <div class="category-icon">🍖</div>
+        <h2 class="category-title">족발 (Jokbal)</h2>
+      </div>
 
-<!-- 냉면 메뉴 -->
-<div class="menu-category">
-    <div class="category-header">
-      <div class="category-icon">🍜</div>
-      <h2 class="category-title">냉면 (Cold Noodles)</h2>
+      <div class="menu-item">
+        <h3 class="item-name">
+          <span class="item-label"><span class="label-ko">족발</span><span class="label-en"
+              style="display:none;">Jokbal</span></span>
+          <span class="arrow">ⓘ</span>
+          <span class="item-price-separator"></span><span class="item-price">$40.99</span>
+        </h3>
+        <p class="item-description">부드럽게 삶아 특제 양념으로 맛을 낸 전통 방식의 족발</p>
+      </div>
+
+      <div class="menu-item">
+        <h3 class="item-name">
+          <span class="item-label"><span class="label-ko">매운 족발</span><span class="label-en" style="display:none;">Bul
+              Jokbal</span></span>
+          <span class="arrow">ⓘ</span>
+          <span class="item-price-separator"></span><span class="item-price">$43.99</span>
+        </h3>
+        <p class="item-description">매콤한 양념을 곁들인 화끈한 맛의 족발</p>
+      </div>
+
+      <div class="menu-item">
+        <h3 class="item-name">
+          <span class="item-label"><span class="label-ko">족발무침</span><span class="label-en" style="display:none;">Jokbal
+              Muchim</span></span>
+          <span class="arrow">ⓘ</span>
+          <span class="item-price-separator"></span><span class="item-price">$40.99</span>
+        </h3>
+        <p class="item-description">특제 양념에 버무린 족발무침</p>
+      </div>
+
+      <div class="menu-item">
+        <h3 class="item-name">
+          <span class="item-label"><span class="label-ko">냉채족발</span><span class="label-en"
+              style="display:none;">Naengchae Jokbal</span></span>
+          <span class="arrow">ⓘ</span>
+          <span class="item-price-separator"></span><span class="item-price">$43.99</span>
+        </h3>
+        <p class="item-description">신선한 채소와 함께 차갑게 즐기는 족발</p>
+      </div>
+
+      <!-- ✅ 추가된 메뉴들 -->
+      <div class="menu-item">
+        <h3 class="item-name">
+          <span class="item-label"><span class="label-ko">BBQ 치즈 족발</span><span class="label-en"
+              style="display:none;">BBQ Cheese Jokbal</span></span>
+          <span class="arrow">ⓘ</span>
+          <span class="item-price-separator"></span><span class="item-price">$45.99</span>
+        </h3>
+        <p class="item-description">BBQ 소스와 치즈를 곁들인 특별한 족발</p>
+      </div>
+
+      <div class="menu-item">
+        <h3 class="item-name">
+          <span class="item-label"><span class="label-ko">보쌈</span><span class="label-en"
+              style="display:none;">Bossam</span></span>
+          <span class="arrow">ⓘ</span>
+          <span class="item-price-separator"></span><span class="item-price">$39.99</span>
+        </h3>
+        <p class="item-description">부드럽게 삶은 돼지고기와 양배추, 쌈장</p>
+      </div>
+
+      <div class="menu-item">
+        <h3 class="item-name">
+          <span class="item-label"><span class="label-ko">족발 + 보쌈 콤보</span><span class="label-en"
+              style="display:none;">Jokbal + Bossam Combo</span></span>
+          <span class="arrow">ⓘ</span>
+          <span class="item-price-separator"></span><span class="item-price">$42.99</span>
+        </h3>
+        <p class="item-description">족발과 보쌈을 함께 즐길 수 있는 콤보</p>
+      </div>
+
+      <div class="menu-item">
+        <h3 class="item-name">
+          <span class="item-label"><span class="label-ko">불족발 + 보쌈 콤보</span><span class="label-en"
+              style="display:none;">Spicy Jokbal + Bossam Combo</span></span>
+          <span class="arrow">ⓘ</span>
+          <span class="item-price-separator"></span><span class="item-price">$45.99</span>
+        </h3>
+        <p class="item-description">매운 족발과 보쌈을 함께 즐길 수 있는 콤보</p>
+      </div>
     </div>
-  
-    <div class="menu-item">
-      <h3 class="item-name">
-        <span class="item-label"><span class="label-ko">함흥냉면</span><span class="label-en" style="display:none;">Hamheung Naengmyeon</span></span>
-        <span class="arrow">ⓘ</span>
-        <span class="item-price-separator"></span><span class="item-price">$18.99</span>
-      </h3>
-      <p class="item-description">매콤한 양념을 곁들인 함흥식 비빔냉면</p>
+
+
+    <!-- 냉면 메뉴 -->
+    <div class="menu-category">
+      <div class="category-header">
+        <div class="category-icon">🍜</div>
+        <h2 class="category-title">냉면 (Cold Noodles)</h2>
+      </div>
+
+      <div class="menu-item">
+        <h3 class="item-name">
+          <span class="item-label"><span class="label-ko">함흥냉면</span><span class="label-en"
+              style="display:none;">Hamheung Naengmyeon</span></span>
+          <span class="arrow">ⓘ</span>
+          <span class="item-price-separator"></span><span class="item-price">$18.99</span>
+        </h3>
+        <p class="item-description">매콤한 양념을 곁들인 함흥식 비빔냉면</p>
+      </div>
+
+      <div class="menu-item">
+        <h3 class="item-name">
+          <span class="item-label"><span class="label-ko">물냉면</span><span class="label-en" style="display:none;">Mul
+              Naengmyeon</span></span>
+          <span class="arrow">ⓘ</span>
+          <span class="item-price-separator"></span><span class="item-price">$17.99</span>
+        </h3>
+        <p class="item-description">시원한 육수에 담긴 전통 물냉면</p>
+      </div>
+
+      <div class="menu-item">
+        <h3 class="item-name">
+          <span class="item-label"><span class="label-ko">회냉면</span><span class="label-en" style="display:none;">Hoe
+              Naengmyeon</span></span>
+          <span class="arrow">ⓘ</span>
+          <span class="item-price-separator"></span><span class="item-price">$20.99</span>
+        </h3>
+        <p class="item-description">신선한 회를 올린 특별한 냉면</p>
+      </div>
+
+      <div class="menu-item">
+        <h3 class="item-name">
+          <span class="item-label"><span class="label-ko">냉면 + LA 갈비</span><span class="label-en"
+              style="display:none;">Naengmyeon + LA Galbi</span></span>
+          <span class="arrow">ⓘ</span>
+          <span class="item-price-separator"></span><span class="item-price">$39.99</span>
+        </h3>
+        <p class="item-description">냉면과 LA 갈비를 함께 즐기는 세트</p>
+      </div>
+
+      <!-- ✅ 새로 추가된 냉면 + L.A 갈비 메뉴 -->
+      <div class="menu-item">
+        <h3 class="item-name">
+          <span class="item-label"><span class="label-ko">함흥냉면 + L.A 갈비</span><span class="label-en"
+              style="display:none;">Hamheung Naengmyeon + L.A Kalbi</span></span>
+          <span class="arrow">ⓘ</span>
+          <span class="item-price-separator"></span><span class="item-price">$39.99</span>
+        </h3>
+        <p class="item-description">매콤한 함흥냉면과 LA 갈비의 환상 조합</p>
+      </div>
+
+      <div class="menu-item">
+        <h3 class="item-name">
+          <span class="item-label"><span class="label-ko">물냉면 + L.A 갈비</span><span class="label-en"
+              style="display:none;">Mul Naengmyeon + L.A Kalbi</span></span>
+          <span class="arrow">ⓘ</span>
+          <span class="item-price-separator"></span><span class="item-price">$38.99</span>
+        </h3>
+        <p class="item-description">시원한 물냉면과 LA 갈비를 함께</p>
+      </div>
+
+      <div class="menu-item">
+        <h3 class="item-name">
+          <span class="item-label"><span class="label-ko">회냉면 + L.A 갈비</span><span class="label-en"
+              style="display:none;">Hoe Naengmyeon + L.A Kalbi</span></span>
+          <span class="arrow">ⓘ</span>
+          <span class="item-price-separator"></span><span class="item-price">$41.99</span>
+        </h3>
+        <p class="item-description">신선한 회냉면과 LA 갈비를 함께</p>
+      </div>
     </div>
-  
-    <div class="menu-item">
-      <h3 class="item-name">
-        <span class="item-label"><span class="label-ko">물냉면</span><span class="label-en" style="display:none;">Mul Naengmyeon</span></span>
-        <span class="arrow">ⓘ</span>
-        <span class="item-price-separator"></span><span class="item-price">$17.99</span>
-      </h3>
-      <p class="item-description">시원한 육수에 담긴 전통 물냉면</p>
-    </div>
-  
-    <div class="menu-item">
-      <h3 class="item-name">
-        <span class="item-label"><span class="label-ko">회냉면</span><span class="label-en" style="display:none;">Hoe Naengmyeon</span></span>
-        <span class="arrow">ⓘ</span>
-        <span class="item-price-separator"></span><span class="item-price">$20.99</span>
-      </h3>
-      <p class="item-description">신선한 회를 올린 특별한 냉면</p>
-    </div>
-  
-    <div class="menu-item">
-      <h3 class="item-name">
-        <span class="item-label"><span class="label-ko">냉면 + LA 갈비</span><span class="label-en" style="display:none;">Naengmyeon + LA Galbi</span></span>
-        <span class="arrow">ⓘ</span>
-        <span class="item-price-separator"></span><span class="item-price">$39.99</span>
-      </h3>
-      <p class="item-description">냉면과 LA 갈비를 함께 즐기는 세트</p>
-    </div>
-  
-    <!-- ✅ 새로 추가된 냉면 + L.A 갈비 메뉴 -->
-    <div class="menu-item">
-      <h3 class="item-name">
-        <span class="item-label"><span class="label-ko">함흥냉면 + L.A 갈비</span><span class="label-en" style="display:none;">Hamheung Naengmyeon + L.A Kalbi</span></span>
-        <span class="arrow">ⓘ</span>
-        <span class="item-price-separator"></span><span class="item-price">$39.99</span>
-      </h3>
-      <p class="item-description">매콤한 함흥냉면과 LA 갈비의 환상 조합</p>
-    </div>
-  
-    <div class="menu-item">
-      <h3 class="item-name">
-        <span class="item-label"><span class="label-ko">물냉면 + L.A 갈비</span><span class="label-en" style="display:none;">Mul Naengmyeon + L.A Kalbi</span></span>
-        <span class="arrow">ⓘ</span>
-        <span class="item-price-separator"></span><span class="item-price">$38.99</span>
-      </h3>
-      <p class="item-description">시원한 물냉면과 LA 갈비를 함께</p>
-    </div>
-  
-    <div class="menu-item">
-      <h3 class="item-name">
-        <span class="item-label"><span class="label-ko">회냉면 + L.A 갈비</span><span class="label-en" style="display:none;">Hoe Naengmyeon + L.A Kalbi</span></span>
-        <span class="arrow">ⓘ</span>
-        <span class="item-price-separator"></span><span class="item-price">$41.99</span>
-      </h3>
-      <p class="item-description">신선한 회냉면과 LA 갈비를 함께</p>
-    </div>
-  </div>
-  <!-- 닭갈비 메뉴 -->
-<div class="menu-category">
-    <div class="category-header">
-      <div class="category-icon">🍲</div>
-      <h2 class="category-title">닭갈비 (Dakgalbi)</h2>
-    </div>
-  
-    <div class="menu-item">
-      <h3 class="item-name">
-        <span class="item-label"><span class="label-ko">닭갈비 (2인분)</span><span class="label-en" style="display:none;">Stir-fried Marinated Chicken (2 portions)</span></span>
-        <span class="arrow">ⓘ</span>
-        <span class="item-price-separator"></span><span class="item-price">$44.99</span>
-      </h3>
-      <p class="item-description">500g 기준 1세트 (2인분)</p>
-    </div>
-  
-    <div class="menu-item">
-      <h3 class="item-name">
-        <span class="item-label"><span class="label-ko">추가 1인분</span><span class="label-en" style="display:none;">Extra 1 Portion</span></span>
-        <span class="arrow">ⓘ</span>
-        <span class="item-price-separator"></span><span class="item-price">$22.50</span>
-      </h3>
-      <p class="item-description">닭갈비 추가 1인분</p>
-    </div>
-  
-    <div class="menu-item">
-      <h3 class="item-name">
-        <span class="item-label"><span class="label-ko">토핑</span><span class="label-en" style="display:none;">Toppings</span></span>
-        <span class="arrow">ⓘ</span>
-        <span class="item-price-separator"></span>
-      </h3>
-      <p class="item-description" style="display: block;"></p>>
+    <!-- 닭갈비 메뉴 -->
+    <div class="menu-category">
+      <div class="category-header">
+        <div class="category-icon">🍲</div>
+        <h2 class="category-title">닭갈비 (Dakgalbi)</h2>
+      </div>
+
+      <div class="menu-item">
+        <h3 class="item-name">
+          <span class="item-label"><span class="label-ko">닭갈비 (2인분)</span><span class="label-en"
+              style="display:none;">Stir-fried Marinated Chicken (2 portions)</span></span>
+          <span class="arrow">ⓘ</span>
+          <span class="item-price-separator"></span><span class="item-price">$44.99</span>
+        </h3>
+        <p class="item-description">500g 기준 1세트 (2인분)</p>
+      </div>
+
+      <div class="menu-item">
+        <h3 class="item-name">
+          <span class="item-label"><span class="label-ko">추가 1인분</span><span class="label-en"
+              style="display:none;">Extra 1 Portion</span></span>
+          <span class="arrow">ⓘ</span>
+          <span class="item-price-separator"></span><span class="item-price">$22.50</span>
+        </h3>
+        <p class="item-description">닭갈비 추가 1인분</p>
+      </div>
+
+      <div class="menu-item">
+        <h3 class="item-name">
+          <span class="item-label"><span class="label-ko">토핑</span><span class="label-en"
+              style="display:none;">Toppings</span></span>
+          <span class="arrow">ⓘ</span>
+          <span class="item-price-separator"></span>
+        </h3>
+        <p class="item-description" style="display: block;"></p>>
         치즈 추가 Extra Cheese - $6.99<br>
         떡볶이 추가 Extra Rice Cake - $3.99<br>
         고구마 추가 Extra Sweet Potato - $3.99<br>
         단호박 추가 Extra Kabocha Squash - $3.99<br>
         우동 사리 Extra Udon Noodle - $6.99<br>
         김치볶음밥 Extra Fried Rice with Kimchi - $6.99
+        </p>
+      </div>
+
+      <div class="menu-item">
+        <h3 class="item-name">
+          <span class="item-label"><span class="label-ko">생 닭갈비 (야채 포함)</span><span class="label-en"
+              style="display:none;">*Marinated Raw Chicken with Vegetables</span></span>
+          <span class="arrow">ⓘ</span>
+          <span class="item-price-separator"></span><span class="item-price">$22.99</span>
+        </h3>
+        <p class="item-description">350g 포장 판매</p>
+      </div>
+    </div>
+
+    <!-- 런치 스페셜 메뉴 -->
+    <div class="menu-category">
+      <div class="category-header">
+        <div class="category-icon">🍱</div>
+        <h2 class="category-title">런치스페셜 (Lunch Specials)</h2>
+      </div>
+
+      <p style="margin: 0 0 1rem 0; font-size: 0.95rem; color: #555;">
+        월 - 금, 오후 12시 ~ 3시, 식사만 가능<br>
+        Mon - Fri, 12 PM - 3 PM, Dine-in Only<br>
+        Served with 1 Bowl of Rice & Soup
       </p>
-    </div>
-  
-    <div class="menu-item">
-      <h3 class="item-name">
-        <span class="item-label"><span class="label-ko">생 닭갈비 (야채 포함)</span><span class="label-en" style="display:none;">*Marinated Raw Chicken with Vegetables</span></span>
-        <span class="arrow">ⓘ</span>
-        <span class="item-price-separator"></span><span class="item-price">$22.99</span>
-      </h3>
-      <p class="item-description">350g 포장 판매</p>
-    </div>
-  </div>
-  
-  <!-- 런치 스페셜 메뉴 -->
-<div class="menu-category">
-    <div class="category-header">
-      <div class="category-icon">🍱</div>
-      <h2 class="category-title">런치스페셜 (Lunch Specials)</h2>
-    </div>
-  
-    <p style="margin: 0 0 1rem 0; font-size: 0.95rem; color: #555;">
-      월 - 금, 오후 12시 ~ 3시, 식사만 가능<br>
-      Mon - Fri, 12 PM - 3 PM, Dine-in Only<br>
-      Served with 1 Bowl of Rice & Soup
-    </p>
-  
-    <div class="menu-item">
-      <h3 class="item-name">
-        <span class="item-label"><span class="label-ko">고등어구이</span><span class="label-en" style="display:none;">Grilled Mackerel</span></span>
-        <span class="arrow">ⓘ</span>
-        <span class="item-price-separator"></span><span class="item-price">$18.99</span>
-      </h3>
-      <p class="item-description">구운 고등어 정식</p>
-    </div>
-  
-    <div class="menu-item">
-      <h3 class="item-name">
-        <span class="item-label"><span class="label-ko">닭갈비</span><span class="label-en" style="display:none;">Stir-fried Spicy Chicken</span></span>
-        <span class="arrow">ⓘ</span>
-        <span class="item-price-separator"></span><span class="item-price">$18.99</span>
-      </h3>
-      <p class="item-description">매콤한 닭갈비 정식</p>
-    </div>
-  
-    <div class="menu-item">
-      <h3 class="item-name">
-        <span class="item-label"><span class="label-ko">제육볶음</span><span class="label-en" style="display:none;">Stir-fried Marinated Pork with Spicy Sauce</span></span>
-        <span class="arrow">ⓘ</span>
-        <span class="item-price-separator"></span><span class="item-price">$18.99</span>
-      </h3>
-      <p class="item-description">매콤한 제육볶음 정식</p>
-    </div>
-  
-    <div class="menu-item">
-      <h3 class="item-name">
-        <span class="item-label"><span class="label-ko">불고기</span><span class="label-en" style="display:none;">Stir-fried Marinated Beef with Noodle</span></span>
-        <span class="arrow">ⓘ</span>
-        <span class="item-price-separator"></span><span class="item-price">$18.99</span>
-      </h3>
-      <p class="item-description">불고기와 당면이 함께 나오는 정식</p>
-    </div>
-  
-    <div class="menu-item">
-      <h3 class="item-name">
-        <span class="item-label"><span class="label-ko">보쌈</span><span class="label-en" style="display:none;">Braised Pork Belly</span></span>
-        <span class="arrow">ⓘ</span>
-        <span class="item-price-separator"></span><span class="item-price">$18.99</span>
-      </h3>
-      <p class="item-description">보쌈과 밥, 국이 함께 제공됩니다</p>
-    </div>
-  </div>
 
-  
-  <!-- 사이드 메뉴 -->
-<div class="menu-category">
-    <div class="category-header">
-      <div class="category-icon">🥟</div>
-      <h2 class="category-title">사이드 (Sides)</h2>
-    </div>
-  
-    <div class="menu-item">
-      <h3 class="item-name">
-        <span class="item-label"><span class="label-ko">김치전</span><span class="label-en" style="display:none;">Kimchi Pancake</span></span>
-        <span class="arrow">ⓘ</span>
-        <span class="item-price-separator"></span><span class="item-price">$19.99</span>
-      </h3>
-      <p class="item-description">바삭하게 구운 김치전</p>
-    </div>
-  
-    <div class="menu-item">
-      <h3 class="item-name">
-        <span class="item-label"><span class="label-ko">해물파전</span><span class="label-en" style="display:none;">Seafood Pancake</span></span>
-        <span class="arrow">ⓘ</span>
-        <span class="item-price-separator"></span><span class="item-price">$25.99</span>
-      </h3>
-      <p class="item-description">각종 해산물과 부추가 어우러진 파전</p>
-    </div>
-  
-    <div class="menu-item">
-      <h3 class="item-name">
-        <span class="item-label"><span class="label-ko">떡볶이</span><span class="label-en" style="display:none;">Tteokbokki</span></span>
-        <span class="arrow">ⓘ</span>
-        <span class="item-price-separator"></span><span class="item-price">$17.99</span>
-      </h3>
-      <p class="item-description" style="display: block;">
-        Stir-fried Rice Cakes with Fish Cakes & Spicy Sauce<br>
-        <br>치즈 추가 Extra Cheese - $6.99
-      </p>
-    </div>
-  </div>
-  
-  <!-- 주류 메뉴 -->
-  <div class="menu-category">
-    <div class="category-header">
-      <div class="category-icon">🍶</div>
-      <h2 class="category-title">주류 (Beverages)</h2>
-    </div>
-  
-    <div class="menu-item">
-      <h3 class="item-name">
-        <span class="item-label"><span class="label-ko">음료수</span><span class="label-en" style="display:none;">Pop</span></span>
-        <span class="arrow">ⓘ</span>
-        <span class="item-price-separator"></span><span class="item-price">$3</span>
-      </h3>
-      <p class="item-description">콜라, 사이다 등</p>
-    </div>
-  
-    <div class="menu-item">
-      <h3 class="item-name">
-        <span class="item-label"><span class="label-ko">밀키스</span><span class="label-en" style="display:none;">Milkis</span></span>
-        <span class="arrow">ⓘ</span>
-        <span class="item-price-separator"></span><span class="item-price">$4</span>
-      </h3>
-      <p class="item-description">달콤하고 톡 쏘는 탄산음료</p>
-    </div>
-  
-    <div class="menu-item">
-      <h3 class="item-name">
-        <span class="item-label"><span class="label-ko">알로에음료</span><span class="label-en" style="display:none;">Aloe</span></span>
-        <span class="arrow">ⓘ</span>
-        <span class="item-price-separator"></span><span class="item-price">$4.5</span>
-      </h3>
-      <p class="item-description">알로에가 들어간 시원한 음료</p>
-    </div>
-  
-    <div class="menu-item">
-      <h3 class="item-name">
-        <span class="item-label"><span class="label-ko">맥주</span><span class="label-en" style="display:none;">Beer</span></span>
-        <span class="arrow">ⓘ</span>
-        <span class="item-price-separator"></span><span class="item-price">$6</span>
-      </h3>
-      <p class="item-description">병맥주 또는 캔맥주</p>
-    </div>
-  
-    <div class="menu-item">
-      <h3 class="item-name">
-        <span class="item-label"><span class="label-ko">소주</span><span class="label-en" style="display:none;">Soju</span></span>
-        <span class="arrow">ⓘ</span>
-        <span class="item-price-separator"></span><span class="item-price">$22</span>
-      </h3>
-      <p class="item-description">전통 한국 소주</p>
-    </div>
-  
-    <div class="menu-item">
-      <h3 class="item-name">
-        <span class="item-label"><span class="label-ko">막걸리</span><span class="label-en" style="display:none;">Makguli</span></span>
-        <span class="arrow">ⓘ</span>
-        <span class="item-price-separator"></span><span class="item-price">$20</span>
-      </h3>
-      <p class="item-description">전통 한국 탁주</p>
-    </div>
-  </div>
+      <div class="menu-item">
+        <h3 class="item-name">
+          <span class="item-label"><span class="label-ko">고등어구이</span><span class="label-en"
+              style="display:none;">Grilled Mackerel</span></span>
+          <span class="arrow">ⓘ</span>
+          <span class="item-price-separator"></span><span class="item-price">$18.99</span>
+        </h3>
+        <p class="item-description">구운 고등어 정식</p>
+      </div>
 
-  <!-- 하단 주소 및 연락처 -->
-  <footer style="margin-top: 4rem; padding: 1rem; text-align: center; color: #2c2c2c; font-family: 'JSArirang-Regular', serif; font-size: 0.95rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem;">
-    <span>📍 6028 Yonge Street, North York ON M2M 3W5, CANADA</span>
-    <span>📞 (416) 519-0068</span>
-    <span>✉️ sonamu.toronto@gmail.com</span>
-  </footer>
-  
+      <div class="menu-item">
+        <h3 class="item-name">
+          <span class="item-label"><span class="label-ko">닭갈비</span><span class="label-en"
+              style="display:none;">Stir-fried Spicy Chicken</span></span>
+          <span class="arrow">ⓘ</span>
+          <span class="item-price-separator"></span><span class="item-price">$18.99</span>
+        </h3>
+        <p class="item-description">매콤한 닭갈비 정식</p>
+      </div>
 
-  
-  <script>
-    document.querySelectorAll('.item-name').forEach(item => {
-      item.addEventListener('click', () => {
-        const desc = item.nextElementSibling;
-        if (desc.classList.contains('item-description')) {
-          const isOpen = desc.style.display === 'block';
-          desc.style.display = isOpen ? 'none' : 'block';
-        }
+      <div class="menu-item">
+        <h3 class="item-name">
+          <span class="item-label"><span class="label-ko">제육볶음</span><span class="label-en"
+              style="display:none;">Stir-fried Marinated Pork with Spicy Sauce</span></span>
+          <span class="arrow">ⓘ</span>
+          <span class="item-price-separator"></span><span class="item-price">$18.99</span>
+        </h3>
+        <p class="item-description">매콤한 제육볶음 정식</p>
+      </div>
+
+      <div class="menu-item">
+        <h3 class="item-name">
+          <span class="item-label"><span class="label-ko">불고기</span><span class="label-en"
+              style="display:none;">Stir-fried Marinated Beef with Noodle</span></span>
+          <span class="arrow">ⓘ</span>
+          <span class="item-price-separator"></span><span class="item-price">$18.99</span>
+        </h3>
+        <p class="item-description">불고기와 당면이 함께 나오는 정식</p>
+      </div>
+
+      <div class="menu-item">
+        <h3 class="item-name">
+          <span class="item-label"><span class="label-ko">보쌈</span><span class="label-en" style="display:none;">Braised
+              Pork Belly</span></span>
+          <span class="arrow">ⓘ</span>
+          <span class="item-price-separator"></span><span class="item-price">$18.99</span>
+        </h3>
+        <p class="item-description">보쌈과 밥, 국이 함께 제공됩니다</p>
+      </div>
+    </div>
+
+
+    <!-- 사이드 메뉴 -->
+    <div class="menu-category">
+      <div class="category-header">
+        <div class="category-icon">🥟</div>
+        <h2 class="category-title">사이드 (Sides)</h2>
+      </div>
+
+      <div class="menu-item">
+        <h3 class="item-name">
+          <span class="item-label"><span class="label-ko">김치전</span><span class="label-en" style="display:none;">Kimchi
+              Pancake</span></span>
+          <span class="arrow">ⓘ</span>
+          <span class="item-price-separator"></span><span class="item-price">$19.99</span>
+        </h3>
+        <p class="item-description">바삭하게 구운 김치전</p>
+      </div>
+
+      <div class="menu-item">
+        <h3 class="item-name">
+          <span class="item-label"><span class="label-ko">해물파전</span><span class="label-en"
+              style="display:none;">Seafood Pancake</span></span>
+          <span class="arrow">ⓘ</span>
+          <span class="item-price-separator"></span><span class="item-price">$25.99</span>
+        </h3>
+        <p class="item-description">각종 해산물과 부추가 어우러진 파전</p>
+      </div>
+
+      <div class="menu-item">
+        <h3 class="item-name">
+          <span class="item-label"><span class="label-ko">떡볶이</span><span class="label-en"
+              style="display:none;">Tteokbokki</span></span>
+          <span class="arrow">ⓘ</span>
+          <span class="item-price-separator"></span><span class="item-price">$17.99</span>
+        </h3>
+        <p class="item-description" style="display: block;">
+          Stir-fried Rice Cakes with Fish Cakes & Spicy Sauce<br>
+          <br>치즈 추가 Extra Cheese - $6.99
+        </p>
+      </div>
+    </div>
+
+    <!-- 주류 메뉴 -->
+    <div class="menu-category">
+      <div class="category-header">
+        <div class="category-icon">🍶</div>
+        <h2 class="category-title">주류 (Beverages)</h2>
+      </div>
+
+      <div class="menu-item">
+        <h3 class="item-name">
+          <span class="item-label"><span class="label-ko">음료수</span><span class="label-en"
+              style="display:none;">Pop</span></span>
+          <span class="arrow">ⓘ</span>
+          <span class="item-price-separator"></span><span class="item-price">$3</span>
+        </h3>
+        <p class="item-description">콜라, 사이다 등</p>
+      </div>
+
+      <div class="menu-item">
+        <h3 class="item-name">
+          <span class="item-label"><span class="label-ko">밀키스</span><span class="label-en"
+              style="display:none;">Milkis</span></span>
+          <span class="arrow">ⓘ</span>
+          <span class="item-price-separator"></span><span class="item-price">$4</span>
+        </h3>
+        <p class="item-description">달콤하고 톡 쏘는 탄산음료</p>
+      </div>
+
+      <div class="menu-item">
+        <h3 class="item-name">
+          <span class="item-label"><span class="label-ko">알로에음료</span><span class="label-en"
+              style="display:none;">Aloe</span></span>
+          <span class="arrow">ⓘ</span>
+          <span class="item-price-separator"></span><span class="item-price">$4.5</span>
+        </h3>
+        <p class="item-description">알로에가 들어간 시원한 음료</p>
+      </div>
+
+      <div class="menu-item">
+        <h3 class="item-name">
+          <span class="item-label"><span class="label-ko">맥주</span><span class="label-en"
+              style="display:none;">Beer</span></span>
+          <span class="arrow">ⓘ</span>
+          <span class="item-price-separator"></span><span class="item-price">$6</span>
+        </h3>
+        <p class="item-description">병맥주 또는 캔맥주</p>
+      </div>
+
+      <div class="menu-item">
+        <h3 class="item-name">
+          <span class="item-label"><span class="label-ko">소주</span><span class="label-en"
+              style="display:none;">Soju</span></span>
+          <span class="arrow">ⓘ</span>
+          <span class="item-price-separator"></span><span class="item-price">$22</span>
+        </h3>
+        <p class="item-description">전통 한국 소주</p>
+      </div>
+
+      <div class="menu-item">
+        <h3 class="item-name">
+          <span class="item-label"><span class="label-ko">막걸리</span><span class="label-en"
+              style="display:none;">Makguli</span></span>
+          <span class="arrow">ⓘ</span>
+          <span class="item-price-separator"></span><span class="item-price">$20</span>
+        </h3>
+        <p class="item-description">전통 한국 탁주</p>
+      </div>
+    </div>
+
+    <!-- 하단 주소 및 연락처 -->
+    <footer
+      style="margin-top: 4rem; padding: 1rem; text-align: center; color: #2c2c2c; font-family: 'JSArirang-Regular', serif; font-size: 0.95rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem;">
+      <span>📍 6028 Yonge Street, North York ON M2M 3W5, CANADA</span>
+      <span>📞 (416) 519-0068</span>
+      <span>✉️ sonamu.toronto@gmail.com</span>
+    </footer>
+
+
+
+    <script>
+      document.querySelectorAll('.item-name').forEach(item => {
+        item.addEventListener('click', () => {
+          const desc = item.nextElementSibling;
+          if (desc.classList.contains('item-description')) {
+            const isOpen = desc.style.display === 'block';
+            desc.style.display = isOpen ? 'none' : 'block';
+          }
+        });
       });
-    });
 
-    document.getElementById('btn-korean').addEventListener('click', () => {
-      document.querySelectorAll('.label-ko').forEach(el => el.style.display = 'inline');
-      document.querySelectorAll('.label-en').forEach(el => el.style.display = 'none');
-      document.getElementById('btn-korean').style.backgroundColor = '#f0f0f0';
-      document.getElementById('btn-english').style.backgroundColor = '#fff';
-    });
+      document.getElementById('btn-korean').addEventListener('click', () => {
+        document.querySelectorAll('.label-ko').forEach(el => el.style.display = 'inline');
+        document.querySelectorAll('.label-en').forEach(el => el.style.display = 'none');
+        document.getElementById('btn-korean').style.backgroundColor = '#f0f0f0';
+        document.getElementById('btn-english').style.backgroundColor = '#fff';
+      });
 
-    document.getElementById('btn-english').addEventListener('click', () => {
-      document.querySelectorAll('.label-ko').forEach(el => el.style.display = 'none');
-      document.querySelectorAll('.label-en').forEach(el => el.style.display = 'inline');
-      document.getElementById('btn-english').style.backgroundColor = '#f0f0f0';
-      document.getElementById('btn-korean').style.backgroundColor = '#fff';
-    });
-  </script>
+      document.getElementById('btn-english').addEventListener('click', () => {
+        document.querySelectorAll('.label-ko').forEach(el => el.style.display = 'none');
+        document.querySelectorAll('.label-en').forEach(el => el.style.display = 'inline');
+        document.getElementById('btn-english').style.backgroundColor = '#f0f0f0';
+        document.getElementById('btn-korean').style.backgroundColor = '#fff';
+      });
+    </script>
 </body>
+
 </html>
